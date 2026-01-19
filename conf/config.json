@@ -1,1 +1,51 @@
+{
+    "arch": {
+        "LeNet": {
+            "name": "LeNet",
+            "in_channels": 3,
+            "num_classes": 23
+        },
 
+        "AlexNet": {
+            "name": "AlexNet",
+            "in_channels": 3,
+            "num_classes": 23
+        },
+
+        "ViT": {
+            "name": "ViT",
+            "in_channels": 3,
+            "num_classes": 23
+        },
+        
+        "ResNet": {
+            "name": "ResNet",
+            "in_channels": 3,
+            "num_classes": 23
+        }
+    },
+
+    "data": {
+        "train_path": "dataset/train_dataset.h5",
+        "test_path": "dataset/test_dataset.h5",
+        "field_names": ["images", "labels"],
+        "mean": [86, 86, 85],
+        "std": [76, 75, 76]
+    },
+
+    "scheduler": {
+        "initial_lr": 1e-4,
+        "decay_rate": 0.1,
+        "scheduler_epoch": 8
+    },
+
+    "train": {
+        "batch_size": 32,
+        "max_epochs": 128,
+        "validation_epochs": 1
+    },
+
+    "output": {
+        "output_path": "runs"
+    }
+}
